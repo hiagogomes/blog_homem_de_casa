@@ -1,5 +1,170 @@
 {% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Homem de Casa | Produtos e Dicas para o Homem Moderno{% endblock %}
 
 {% block content %}
-    
+
+<!-- Banner de Boas-Vindas -->
+<section class="p-3 p-md-5 text-white rounded bg-dark mb-5" aria-labelledby="boas-vindas">
+  <div class="col-md-8 px-0">
+    <h1 id="boas-vindas" class="display-6 fw-bold fst-italic">Bem-vindo ao Homem de Casa</h1>
+    <p class="lead">
+      Aqui você encontra dicas e recomendações de produtos que facilitam o dia a dia. Ferramentas, utensílios domésticos, eletrônicos e mais — tudo pensado para homens que valorizam conforto, praticidade e estilo.
+    </p>
+  </div>
+</section>
+
+<!-- Seção de Conteúdo -->
+<section class="mb-5" aria-labelledby="conteudos-destaque">
+  <h2 id="conteudos-destaque" class="fw-bold border-start border-4 ps-3 border-dark text-uppercase text-dark mb-4">
+    <i class="bi bi-journal-text me-2"></i>Conteúdos em destaque
+  </h2>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    {% comment %} Artigos com links internos {% endcomment %}
+    <article class="col" aria-labelledby="post-ps5">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="{% static 'blog/img/playstation5.webp' %}" class="img-fluid rounded" alt="Console PlayStation 5" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="post-ps5" class="card-title text-dark fs-6 fw-semibold mb-2">
+            PlayStation 5: Vale a Pena Comprar? Veja o Review Completo
+          </h3>
+          <a href="{% url 'playstation' %}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm rounded-pill mt-auto">
+            Leia mais...
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="col" aria-labelledby="post-detetive">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="https://m.media-amazon.com/images/I/81XteUiO5hL._AC_SX679_.jpg" class="img-fluid" alt="Jogo Detetive" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="post-detetive" class="card-title text-dark fs-6 fw-semibold mb-2">
+            Detetive: Entre no Clima de Mistério com Quem Você Gosta
+          </h3>
+          <a href="{% url 'jogo' %}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm rounded-pill mt-auto">
+            Leia mais...
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="col" aria-labelledby="post-relogio">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="https://m.media-amazon.com/images/I/61ndKyrmFEL._AC_SY741_.jpg" class="img-fluid" alt="Relógio masculino com pulseira de couro" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="post-relogio" class="card-title text-dark fs-6 fw-semibold mb-2">
+            Relógio Masculino: Estilo, Presença e a Escolha Certa para Cada Ocasião
+          </h3>
+          <a href="{% url 'relogios' %}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm rounded-pill mt-auto">
+            Leia mais...
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="col" aria-labelledby="post-lavadora">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="https://http2.mlstatic.com/D_NQ_NP_830552-MLU77350642487_062024-O.webp" class="img-fluid" alt="Lavadora de alta pressão Vonder" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="post-lavadora" class="card-title text-dark fs-6 fw-semibold mb-2">
+            Lavadora de Alta Pressão Vonder: Potência para sua Casa
+          </h3>
+          <a href="{% url 'lavadora' %}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm rounded-pill mt-auto">
+            Leia mais...
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Seção: Melhores Compras -->
+<section class="mb-5" aria-labelledby="melhores-compras">
+  <h2 id="melhores-compras" class="fw-bold border-start border-4 ps-3 border-dark text-uppercase text-dark mb-4">
+    <i class="bi bi-cart-check-fill me-2"></i>Melhores Compras
+  </h2>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+    {% comment %} Produtos com link de afiliado {% endcomment %}
+    <article class="col" aria-labelledby="produto-panelas">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="{% static 'blog/img/panela-ceramica.webp' %}" class="img-fluid rounded" alt="Conjunto de panelas de cerâmica" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="produto-panelas" class="card-title fs-6 text-dark mb-2">
+            Conjunto de Panelas 8 Peças Cerâmica Life Smart Plus Vanilla - Brinox
+          </h3>
+          <p class="text-muted small mb-3">Loja: Mercado Livre</p>
+          <a href="https://mercadolivre.com/sec/1sbw5EY" target="_blank" rel="nofollow noopener noreferrer" class="btn btn-danger btn-sm rounded-pill mt-auto">
+            Ver oferta
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="col" aria-labelledby="produto-ps5">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="{% static 'blog/img/playstation5.webp' %}" class="img-fluid rounded" alt="PlayStation 5 Slim" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="produto-ps5" class="card-title fs-6 text-dark mb-2">
+            Console Sony PlayStation 5 Digital Slim 1TB – Branco
+          </h3>
+          <p class="text-muted small mb-3">Loja: Mercado Livre</p>
+          <a href="https://mercadolivre.com/sec/1iDkAXU" target="_blank" rel="nofollow noopener noreferrer" class="btn btn-danger btn-sm rounded-pill mt-auto">
+            Ver oferta
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="col" aria-labelledby="produto-airfryer">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="{% static 'blog/img/airfryer.webp' %}" class="img-fluid rounded" alt="Air Fryer Philco PFR2200" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="produto-airfryer" class="card-title fs-6 text-dark mb-2">
+            Fritadeira Elétrica Air Fryer Oven Philco PFR2200 12L – Preta
+          </h3>
+          <p class="text-muted small mb-3">Loja: Mercado Livre</p>
+          <a href="https://mercadolivre.com/sec/22pMNee" target="_blank" rel="nofollow noopener noreferrer" class="btn btn-danger btn-sm rounded-pill mt-auto">
+            Ver oferta
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="col" aria-labelledby="produto-echo">
+      <div class="card h-100 border rounded-4 shadow-sm p-2">
+        <div class="text-center p-2">
+          <img src="{% static 'blog/img/echo-pop.jpg' %}" class="img-fluid rounded" alt="Echo Pop Smart Speaker com Alexa" style="max-height: 180px; object-fit: contain;">
+        </div>
+        <div class="card-body d-flex flex-column px-2">
+          <h3 id="produto-echo" class="card-title fs-6 text-dark mb-2">
+            Echo Pop | Smart speaker compacto com som envolvente e Alexa
+          </h3>
+          <p class="text-muted small mb-3">Loja: Amazon</p>
+          <a href="https://mercadolivre.com/sec/22pMNee" target="_blank" rel="nofollow noopener noreferrer" class="btn btn-danger btn-sm rounded-pill mt-auto">
+            Ver oferta
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
 {% endblock %}

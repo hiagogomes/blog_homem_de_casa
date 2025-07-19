@@ -1,0 +1,68 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Política de Privacidade | Homem de Casa{% endblock %}
+
+{% block content %}
+<section class="container py-5" aria-labelledby="politica-privacidade-titulo">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 fs-5">
+            <h1 id="politica-privacidade-titulo" class="mb-4 text-center">Política de Privacidade</h1>
+
+            <article>
+                <p>
+                    Esta Política de Privacidade descreve como as informações dos visitantes são coletadas, usadas e protegidas ao acessarem o blog <strong>Homem de Casa</strong>.
+                </p>
+
+                <section>
+                    <h2 class="mt-4">1. Coleta de informações</h2>
+                    <p>
+                        O blog <strong>Homem de Casa</strong> não coleta informações pessoais sensíveis dos usuários, como nome, endereço ou CPF. Podemos utilizar cookies e ferramentas de análise (como Google Analytics) para entender o comportamento de navegação no site, sempre de forma anônima.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">2. Links de afiliado</h2>
+                    <p>
+                        Utilizamos links de afiliados das plataformas <strong>Amazon</strong> e <strong>Mercado Livre</strong>. Isso significa que, ao clicar em determinados links e realizar uma compra, podemos receber uma pequena comissão — sem nenhum custo adicional para você.
+                    </p>
+                    <p>
+                        Essas plataformas podem utilizar cookies próprios para rastrear essas atividades. Recomendamos que você consulte também as políticas de privacidade da <a href="https://www.amazon.com.br/gp/help/customer/display.html?nodeId=508088" target="_blank" rel="noopener noreferrer">Amazon</a> e do <a href="https://www.mercadolivre.com.br/privacidade" target="_blank" rel="noopener noreferrer">Mercado Livre</a> para mais informações.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">3. Segurança</h2>
+                    <p>
+                        Tomamos medidas para manter este site seguro e atualizado, mas lembramos que nenhum sistema online é 100% livre de riscos.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">4. Consentimento</h2>
+                    <p>
+                        Ao continuar navegando no blog <strong>Homem de Casa</strong>, você concorda com os termos desta política de privacidade.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">5. Alterações</h2>
+                    <p>
+                        Esta política pode ser atualizada a qualquer momento. Recomendamos que você a revise periodicamente.
+                    </p>
+                </section>
+
+                <p class="mt-4 text-muted text-end">
+                    Última atualização: Julho de 2025
+                </p>
+            </article>
+        </div>
+
+        <div class="mt-5 mb-5 text-center">
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg rounded-pill px-5" aria-label="Voltar para a página inicial Homem de Casa">
+              &larr; Voltar para a Home
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

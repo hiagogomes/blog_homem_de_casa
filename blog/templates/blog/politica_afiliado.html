@@ -1,0 +1,63 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Política de Afiliados | Homem de Casa{% endblock %}
+
+{% block content %}
+<section class="container py-5" aria-labelledby="politica-afiliados-titulo">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 fs-5">
+            <h1 id="politica-afiliados-titulo" class="mb-4 text-center">Política de Afiliados</h1>
+
+            <article>
+                <p>
+                    O blog <strong>Homem de Casa</strong> participa de programas de afiliados, como os da <strong>Amazon Brasil</strong> e do <strong>Mercado Livre</strong>. Isso significa que alguns dos links presentes nos nossos artigos e páginas podem gerar uma comissão para nós, caso você realize uma compra após clicar neles.
+                </p>
+
+                <section>
+                    <h2 class="mt-4">Transparência com você</h2>
+                    <p>
+                        Sempre indicamos produtos com base em sua utilidade, praticidade e qualidade. A decisão de recomendá-los não depende do valor de comissão, mas sim da relevância para o nosso conteúdo e para o público do blog.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">Sem custo adicional</h2>
+                    <p>
+                        Ao comprar um produto através dos nossos links de afiliado, você <strong>não paga nada a mais por isso</strong>. A comissão recebida é paga diretamente pelas plataformas parceiras (como a Amazon e o Mercado Livre), como forma de retribuição pela indicação.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">Compromisso com a qualidade</h2>
+                    <p>
+                        Nos comprometemos a manter a integridade do conteúdo, priorizando a experiência do leitor. Nenhuma indicação será feita apenas por fins comerciais.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">Parceiros atuais</h2>
+                    <ul>
+                        <li>Programa de Associados da Amazon Brasil</li>
+                        <li>Programa de Afiliados do Mercado Livre</li>
+                    </ul>
+                </section>
+
+                <p class="mt-4">
+                    Se tiver qualquer dúvida sobre nossa política de afiliados ou quiser saber mais sobre como isso funciona, entre em contato conosco pela <a href="{% url 'contato' %}">página de contato</a>.
+                </p>
+
+                <p class="mt-4 text-muted text-end">
+                    Última atualização: Julho de 2025
+                </p>
+            </article>
+        </div>
+
+        <div class="mt-5 mb-5 text-center">
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg rounded-pill px-5" aria-label="Voltar para a página inicial Homem de Casa">
+                &larr; Voltar para a Home
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

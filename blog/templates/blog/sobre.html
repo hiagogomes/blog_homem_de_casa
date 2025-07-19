@@ -1,0 +1,53 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Sobre Nós | Homem de Casa{% endblock %}
+
+{% block content %}
+<section class="container py-5" aria-labelledby="sobre-titulo">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 fs-5">
+            <!-- Título com id para acessibilidade -->
+            <h1 id="sobre-titulo" class="mb-4 text-center">Sobre Nós</h1>
+            <p class="lead text-center">
+                Tudo que um homem precisa para cuidar do seu lar com praticidade, autonomia e estilo.
+            </p>
+
+            <hr class="my-4" role="separator">
+
+            <article>
+                <p>
+                    O <strong>Homem de Casa</strong> é um blog criado por <strong>Hiago Gomes de Souza Barreiros</strong>,
+                    com o objetivo de indicar produtos que realmente ajudam no dia a dia masculino — desde os
+                    afazeres domésticos até os cuidados pessoais.
+                </p>
+
+                <p>
+                    Seja você <strong>solteiro, casado ou morando com alguém</strong>, este é o seu espaço.
+                    Compartilhamos dicas, sugestões e recomendações práticas para tornar sua rotina mais simples e funcional.
+                </p>
+
+                <p>
+                    Todos os produtos indicados aqui são selecionados com base em utilidade, custo-benefício e qualidade,
+                    através dos programas de <strong>afiliados do Mercado Livre e Amazon</strong>. 
+                    Ao comprar pelos nossos links, você apoia nosso trabalho — sem pagar nada a mais por isso.
+                </p>
+
+                <p>
+                    Acreditamos que cuidar do lar é um ato de liberdade, responsabilidade e autoestima.
+                </p>
+
+                <p class="fw-bold mt-4 mb-5 text-center">
+                    Homem de Casa. Seu lar, seu cuidado, sua escolha.
+                </p>
+            </article>
+        </div>
+
+        <div class="mt-5 mb-5 text-center">
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg rounded-pill px-5" aria-label="Voltar para a página inicial Homem de Casa">
+                &larr; Voltar para a Home
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

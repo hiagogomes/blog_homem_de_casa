@@ -1,0 +1,69 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Contato | Homem de Casa{% endblock %}
+
+{% block content %}
+<section class="container py-5" aria-labelledby="contato-titulo">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Título com id para linkagem -->
+            <h1 id="contato-titulo" class="mb-4 text-center display-5 fw-bold">Entre em Contato</h1>
+
+            <p class="text-center fs-5 mb-4">
+                Tem dúvidas, sugestões ou deseja propor uma parceria? Estamos sempre abertos a ouvir você!
+                Preencha o formulário abaixo e responderemos o mais breve possível.
+            </p>
+
+            {% if success %}
+                <div class="alert alert-success text-center" role="alert" aria-live="polite" aria-atomic="true">
+                    Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.
+                </div>
+            {% endif %}
+
+            <form method="POST" action="{% url 'contato' %}" class="p-4 border rounded-4 shadow-sm bg-light" novalidate aria-describedby="form-instrucoes">
+                {% csrf_token %}
+
+                <p id="form-instrucoes" class="visually-hidden">
+                  Campos obrigatórios marcados com *
+                </p>
+
+                <div class="mb-3">
+                    <label for="id_nome" class="form-label">Seu nome <span aria-hidden="true" class="text-danger">*</span></label>
+                    {{ form.nome|add_class:"form-control" }}
+                    {% if form.nome.errors %}
+                      <div class="text-danger small" role="alert">{{ form.nome.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_email" class="form-label">Seu e-mail <span aria-hidden="true" class="text-danger">*</span></label>
+                    {{ form.email|add_class:"form-control" }}
+                    {% if form.email.errors %}
+                      <div class="text-danger small" role="alert">{{ form.email.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="id_mensagem" class="form-label">Mensagem <span aria-hidden="true" class="text-danger">*</span></label>
+                    {{ form.mensagem|add_class:"form-control" }}
+                    {% if form.mensagem.errors %}
+                      <div class="text-danger small" role="alert">{{ form.mensagem.errors }}</div>
+                    {% endif %}
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-5 py-2" aria-label="Enviar mensagem para Homem de Casa">Enviar mensagem</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="mt-5 text-center">
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg rounded-pill px-5" aria-label="Voltar para a página inicial Homem de Casa">
+              &larr; Voltar para a Home
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

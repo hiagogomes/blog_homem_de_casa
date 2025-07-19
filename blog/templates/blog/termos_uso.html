@@ -1,0 +1,72 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}Termos de Uso | Homem de Casa{% endblock %}
+
+{% block content %}
+<section class="container py-5" aria-labelledby="termos-titulo">
+    <div class="row justify-content-center">
+        <div class="col-lg-10 fs-5">
+            <h1 id="termos-titulo" class="mb-4 text-center">Termos de Uso</h1>
+
+            <article>
+                <p>
+                    Este documento estabelece os termos e condições de uso do blog <strong>Homem de Casa</strong>. Ao acessar e utilizar este site, você concorda com todos os termos abaixo. Se não concordar com algum deles, recomendamos que não utilize este site.
+                </p>
+
+                <section>
+                    <h2 class="mt-4">1. Finalidade do site</h2>
+                    <p>
+                        O <strong>Homem de Casa</strong> tem como objetivo compartilhar conteúdos informativos e recomendar produtos úteis relacionados a cuidados com o lar, bem-estar e vida prática masculina. Algumas dessas recomendações contêm links de afiliados, que podem gerar comissões para o blog, sem custo adicional para o usuário.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">2. Responsabilidade sobre as informações</h2>
+                    <p>
+                        Os conteúdos publicados são fruto de pesquisa, experiência pessoal e opinião do autor. Nos esforçamos para manter as informações atualizadas, mas não garantimos que estejam sempre completas ou isentas de erros. Recomendamos que o leitor verifique as informações diretamente nos sites oficiais dos produtos antes de realizar uma compra.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">3. Links externos e afiliados</h2>
+                    <p>
+                        O blog contém links para sites externos, como Amazon e Mercado Livre. Não temos controle sobre o conteúdo, política de privacidade ou práticas desses sites. Qualquer compra realizada através desses links será feita diretamente com os respectivos vendedores ou plataformas.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">4. Propriedade intelectual</h2>
+                    <p>
+                        Todo o conteúdo deste site, incluindo textos, imagens, logotipos e identidade visual, é protegido por direitos autorais e pertence a <strong>Hiago Gomes de Souza Barreiros</strong>, salvo quando indicado o contrário. A reprodução ou uso indevido de qualquer conteúdo sem autorização prévia é proibida.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">5. Modificações nos termos</h2>
+                    <p>
+                        Estes termos podem ser alterados a qualquer momento, sem aviso prévio. Recomendamos que você revise esta página periodicamente para estar ciente de possíveis mudanças.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="mt-4">6. Contato</h2>
+                    <p>
+                        Em caso de dúvidas ou sugestões, entre em contato conosco pela página de <a href="{% url 'contato' %}">contato</a>.
+                    </p>
+                </section>
+
+                <p class="mt-4 text-muted text-end">
+                    Última atualização: Julho de 2025
+                </p>
+            </article>
+        </div>
+
+        <div class="mt-5 mb-5 text-center">
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg rounded-pill px-5" aria-label="Voltar para a página inicial Homem de Casa">
+                &larr; Voltar para a Home
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
