@@ -11,10 +11,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 SECRET_KEY = 'django-insecure-4mj626d(79yob+8%*sq(jw8*n8tyn)r!jppvyr9ew^c1(ko)y6'
 
-DEBUG = True
+DEBUG = False
 
-# ALLOWED_HOSTS = ['www.homemdecasa.blog', 'homemdecasa.blog', 'localhost', '3.19.23.255', '127.0.0.1']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.homemdecasa.blog', 'homemdecasa.blog', '3.19.23.255']
+# ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
