@@ -31,28 +31,28 @@ def contato(request):
     return render(request, 'blog/contato.html', {'form': form, 'success': sucesso})
 
 def playstation(request):
-    return render(request, 'blog/playstation.html')
+    return render(request, 'blog/posts/playstation.html')
 
 def relogios(request):
-    return render(request, 'blog/relogios.html')
+    return render(request, 'blog/posts/relogios.html')
 
-def parafuzadeira(request):
-    return render(request, 'blog/parafuzadeira.html')
+def parafusadeira(request):
+    return render(request, 'blog/posts/parafusadeira.html')
 
 def panelas(request):
-    return render(request, 'blog/panelas.html')
+    return render(request, 'blog/posts/panelas.html')
 
 def airfryer(request):
-    return render(request, 'blog/airfryer.html')
+    return render(request, 'blog/posts/airfryer.html')
 
 def fones(request):
-    return render(request, 'blog/fones.html')
+    return render(request, 'blog/posts/fones.html')
 
 def echopop(request):
-    return render(request, 'blog/echopop.html')
+    return render(request, 'blog/posts/echopop.html')
 
 def lavadora(request):
-    return render(request, 'blog/lavadora.html')
+    return render(request, 'blog/posts/lavadora.html')
 
 def jogo(request):
-    return render(request, 'blog/jogo.html')
+    return render(request, 'blog/posts/jogo.html')

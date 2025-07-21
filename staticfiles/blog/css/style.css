@@ -1,0 +1,28 @@
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #fff; }
+
+.nav-scroll {
+  overflow-x: auto;
+  white-space: nowrap; }
+
+.nav-scroll a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #000;
+  text-decoration: none; }
+
+.nav-scroll a:hover {
+  color: #e59917; }
+
+/* Remove a barra de rolagem do menu em dispositivos Apple */
+.nav-scroll::-webkit-scrollbar {
+  display: none; }
+
+.nav-scroll {
+  -ms-overflow-style: none;
+  /* IE e Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+/*# sourceMappingURL=style.css.map */

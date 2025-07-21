@@ -1,0 +1,101 @@
+{% extends 'blog/base.html' %}
+{% block title %}Comparativo: JBL Wave Flex vs JBL Wave Buds{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <h1 class="mb-5 text-center">Qual JBL Escolher? Veja o Comparativo entre o JBL Wave Flex e o JBL Wave Buds</h1>
+
+  <p class="lead text-center mb-5">
+    Está em dúvida sobre qual fone de ouvido JBL comprar? Neste artigo, comparamos dois modelos muito populares em 2025: o <strong>JBL Wave Flex</strong> e o <strong>JBL Wave Buds</strong>. Veja os destaques de cada um e descubra qual combina mais com você!
+  </p>
+
+  <!-- Imagens dos fones lado a lado -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-5 text-center">
+      <img src="https://m.media-amazon.com/images/I/51tSfGLJiwL._AC_SX679_.jpg" alt="JBL Wave Flex" class="img-fluid" style="max-height: 280px;" loading="lazy">
+      <p class="mt-2 fw-semibold">JBL Wave Flex</p>
+    </div>
+    <div class="col-md-5 text-center">
+      <img src="https://m.media-amazon.com/images/I/51lhZsdupGL._AC_SX679_.jpg" alt="JBL Wave Buds" class="img-fluid" style="max-height: 280px;" loading="lazy">
+      <p class="mt-2 fw-semibold">JBL Wave Buds</p>
+    </div>
+  </div>
+
+  <!-- Tabela comparativa -->
+  <div class="table-responsive mb-5">
+    <table class="table table-bordered table-hover align-middle text-center">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Característica</th>
+          <th scope="col">JBL Wave Flex</th>
+          <th scope="col">JBL Wave Buds</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Design</td>
+          <td>Aberto (sem borracha intra-auricular)</td>
+          <td>Intra-auricular com isolamento</td>
+        </tr>
+        <tr>
+          <td>Bateria</td>
+          <td>Até 32h (8h + 24h estojo)</td>
+          <td>Até 32h (8h + 24h estojo)</td>
+        </tr>
+        <tr>
+          <td>À prova d'água</td>
+          <td>IP54 (resistente a respingos)</td>
+          <td>IP54 (resistente a respingos e poeira)</td>
+        </tr>
+        <tr>
+          <td>Graves</td>
+          <td>Moderados</td>
+          <td>Mais intensos (isolamento ajuda)</td>
+        </tr>
+        <tr>
+          <td>Conforto</td>
+          <td>Mais confortável para uso prolongado</td>
+          <td>Mais firme e seguro na orelha</td>
+        </tr>
+        <tr>
+          <td>Chamadas</td>
+          <td>Microfone com redução de ruído</td>
+          <td>Microfone com redução de ruído</td>
+        </tr>
+        <tr>
+          <td>Link para compra</td>
+          <td>
+            <a href="https://www.amazon.com.br/dp/B0BHDRW3MK" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-primary" aria-label="Comprar JBL Wave Flex na Amazon">Ver na Amazon</a>
+          </td>
+          <td>
+            <a href="https://www.amazon.com.br/dp/B0BHDMHHM9" target="_blank" rel="nofollow noopener" class="btn btn-sm btn-primary" aria-label="Comprar JBL Wave Buds na Amazon">Ver na Amazon</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Conclusão -->
+  <h2 class="mt-5">Conclusão: Qual escolher?</h2>
+  <p class="lead">
+    Ambos os modelos entregam ótima qualidade sonora e excelente autonomia. Se você busca conforto e leveza para longas sessões de uso, o <strong>Wave Flex</strong> pode ser ideal. Já se você prefere um fone com mais isolamento e graves mais encorpados, o <strong>Wave Buds</strong> é uma excelente escolha.
+  </p>
+
+  <div class="text-center my-4">
+    <a href="https://www.amazon.com.br/dp/B0BHDRW3MK" target="_blank" rel="nofollow noopener" class="btn btn-primary btn-lg fw-bold me-2 mt-2" aria-label="Comprar JBL Wave Flex na Amazon">
+      Comprar Wave Flex
+    </a>
+    <a href="https://www.amazon.com.br/dp/B0BHDMHHM9" target="_blank" rel="nofollow noopener" class="btn btn-success btn-lg fw-bold mt-2" aria-label="Comprar JBL Wave Buds na Amazon">
+      Comprar Wave Buds
+    </a>
+  </div>
+
+  <div class="mt-5 text-center">
+    <a href="{% url 'home' %}" class="btn btn-dark btn-lg rounded-pill px-5" aria-label="Voltar para a Home do Homem de Casa">
+      &larr; Voltar para a Home
+    </a>
+  </div>
+
+</div>
+{% endblock %}
